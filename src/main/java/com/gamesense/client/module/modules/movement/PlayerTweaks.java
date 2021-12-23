@@ -83,8 +83,8 @@ public class PlayerTweaks extends Module {
             if (strict.getValue() && mc.player.inventory.getCurrentItem().item instanceof ItemFood)
                 mc.player.connection.sendPacket(new CPacketHeldItemChange(mc.player.inventory.currentItem));
 
-            mc.player.movementInput.moveForward /= 0.2;
-            mc.player.movementInput.moveStrafe /= 0.2;
+            mc.player.movementInput.moveForward *= 5.0f;
+            mc.player.movementInput.moveStrafe *= 5.0f;
 
         }
 
